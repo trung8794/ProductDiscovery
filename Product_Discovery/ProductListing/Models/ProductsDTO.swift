@@ -13,6 +13,10 @@ class BaseResult: EVObject{
     var products = [ProductDTO]()
 }
 
+class BaseResultDetail: EVObject{
+    var product = ProductDTO()
+}
+
 class ProductDTO: EVObject {
     var displayName: String?
     var sku: String?

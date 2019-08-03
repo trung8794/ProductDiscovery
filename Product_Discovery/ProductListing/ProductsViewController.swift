@@ -12,6 +12,7 @@ class ProductsViewController: UIViewController {
 
     @IBOutlet weak var searchNavigationView: UIView!
     @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var searchTextField: UITextField!
     
     // MARK: - Lets
     let productListFacade = ProductListFacade()
@@ -78,6 +79,27 @@ class ProductsViewController: UIViewController {
             self.isLoadingData = false
         }
     }
+    
+ 
+}
+
+
+// MARK: - TextField Delegate
+extension ProductsViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.lstProducts.removeAll()
+        searchTableView.reloadData()
+        
+        // Search Product with Words
+        self.currentPage = 1
+        self.isEndData = false
+        self.keyWord = textField.text.value()
+        
+        getListProducts(_keywords: textField.text.value(), _page: "1", _limit: "20")
+        
+        return true
+    }
 }
 
 
@@ -108,6 +130,12 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = ProductDetailViewController(nibName: "ProductDetailViewController", bundle: nil)
+        detailVC.skuValue = lstProducts[indexPath.row].sku
+        self.present(detailVC, animated: true, completion: nil)
     }
     
 }
