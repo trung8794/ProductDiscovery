@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAA-yt-0Gn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="126.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="122.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small" translatesAutoresizingMaskIntoConstraints="NO" id="Fcz-yn-vH7">
                                 <rect key="frame" x="20" y="20" width="80" height="80"/>
@@ -133,11 +133,12 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.93333333333333335" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="zAA-yt-0Gn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4DX-zk-aJ2"/>
                     <constraint firstAttribute="trailing" secondItem="zAA-yt-0Gn" secondAttribute="trailing" id="5Yn-Xz-Tt5"/>
                     <constraint firstItem="zAA-yt-0Gn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="781-Hq-wfq"/>
-                    <constraint firstAttribute="bottom" secondItem="zAA-yt-0Gn" secondAttribute="bottom" id="O9v-AR-p7e"/>
+                    <constraint firstAttribute="bottom" secondItem="zAA-yt-0Gn" secondAttribute="bottom" constant="4" id="O9v-AR-p7e"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
