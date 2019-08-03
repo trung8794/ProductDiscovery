@@ -11,6 +11,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ProductCell.configCell(_:):ProductCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "oldPrice - sellPrice">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(13000)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in ProductsViewController.initData():ProductsViewController.swift">
          <PersistentStrings>
             <PersistentString

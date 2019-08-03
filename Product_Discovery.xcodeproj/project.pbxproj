@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		382693BF12038B830EDB5DC8 /* Pods_Product_Discovery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D96B3B845C68A044DBE0008 /* Pods_Product_Discovery.framework */; };
+		8A29B7B822F5749800F0D3FF /* CustomFomater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29B7B722F5749800F0D3FF /* CustomFomater.swift */; };
+		8A29B7BA22F5751600F0D3FF /* NumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29B7B922F5751600F0D3FF /* NumberExtension.swift */; };
 		8AA452FF22F536F70084FB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA452FE22F536F70084FB47 /* AppDelegate.swift */; };
 		8AA4530622F536F80084FB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4530522F536F80084FB47 /* Assets.xcassets */; };
 		8AA4530922F536F80084FB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4530722F536F80084FB47 /* LaunchScreen.storyboard */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		19220BABB234987E29BB4366 /* Pods-Product_Discovery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product_Discovery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product_Discovery/Pods-Product_Discovery.debug.xcconfig"; sourceTree = "<group>"; };
 		6D96B3B845C68A044DBE0008 /* Pods_Product_Discovery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Product_Discovery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A29B7B722F5749800F0D3FF /* CustomFomater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFomater.swift; sourceTree = "<group>"; };
+		8A29B7B922F5751600F0D3FF /* NumberExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtension.swift; sourceTree = "<group>"; };
 		8AA452FB22F536F70084FB47 /* Product_Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Product_Discovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA452FE22F536F70084FB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA4530522F536F80084FB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				8AA4531E22F539D40084FB47 /* AppUtils.swift */,
 				8AA4532022F539EE0084FB47 /* Constants.swift */,
 				8AA4532322F53A0F0084FB47 /* CustomGradientView.swift */,
+				8A29B7B722F5749800F0D3FF /* CustomFomater.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			children = (
 				8AA4532622F53A540084FB47 /* OptionalExtension.swift */,
 				8AA4532822F53A6D0084FB47 /* UIViewExtension.swift */,
+				8A29B7B922F5751600F0D3FF /* NumberExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 			files = (
 				8AA4532122F539EE0084FB47 /* Constants.swift in Sources */,
 				8AA4532722F53A540084FB47 /* OptionalExtension.swift in Sources */,
+				8A29B7BA22F5751600F0D3FF /* NumberExtension.swift in Sources */,
 				8AA4531C22F537FF0084FB47 /* ProductCell.swift in Sources */,
 				8AA4531822F537E50084FB47 /* ProductsViewController.swift in Sources */,
 				8AA452FF22F536F70084FB47 /* AppDelegate.swift in Sources */,
@@ -302,6 +309,7 @@
 				8AA4532922F53A6D0084FB47 /* UIViewExtension.swift in Sources */,
 				8AA4532422F53A0F0084FB47 /* CustomGradientView.swift in Sources */,
 				8AA4532D22F5434F0084FB47 /* ProductListFacade.swift in Sources */,
+				8A29B7B822F5749800F0D3FF /* CustomFomater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

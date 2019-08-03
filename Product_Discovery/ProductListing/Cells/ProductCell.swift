@@ -57,27 +57,37 @@ class ProductCell: UITableViewCell {
         lblProductName.text = data.displayName.value().isEmpty ? data.name.value() : data.displayName.value()
         
         // Sell Price
-        if data.price.sellPrice.value() != ""{
+        if data.price.sellPrice.value() != "" && Int(data.price.sellPrice.value())?.formatMoney.value() != ""{
              priceView.isHidden = false
-            lblSellPrice.text = data.price.sellPrice.value()
+            lblSellPrice.text = Int(data.price.sellPrice.value())?.formatMoney.value()
         }else{
             priceView.isHidden = true
         }
         
-        // Don't know which tag use to show percent of Discout, So disCountView will be Hiden
-        discountView.isHidden = true
-        
-        // oldPrice
-        if data.price.supplierSalePrice.value() != ""{
-            discountView.isHidden = false
-            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: data.price.supplierSalePrice.value())
-            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-            
-            lblOldPrice.attributedText = attributeString
+        // Discount view
+        if let sellPrice = Int(data.price.sellPrice.value()), let oldPrice = Int(data.price.supplierSalePrice.value()){
+            if oldPrice - sellPrice == 0{
+                disCountContainerView.isHidden = true
+            }else{
+                // oldPrice
+                if data.price.supplierSalePrice.value() != ""{
+                    disCountContainerView.isHidden = false
+                    let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: data.price.supplierSalePrice.value())
+                    attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSMakeRange(0, attributeString.length))
+                    
+                    lblOldPrice.attributedText = attributeString
+                    
+                    // count the percent of Discount
+                    let percent = CGFloat(oldPrice - sellPrice) / CGFloat(oldPrice)
+                    lblDiscount.text = "-\(Double(round(100*percent)/100))%"
+                }else{
+                    disCountContainerView.isHidden = true
+                }
+                
+            }
         }else{
-            discountView.isHidden = true
+            disCountContainerView.isHidden = true
         }
-        
     }
     
     
@@ -103,7 +113,10 @@ class ProductCell: UITableViewCell {
                 if data != nil{
                     self.imgProduct.image =  UIImage(data: data!)
                     if let cachImage = self.cacheImageForCell{
+                        
                         cachImage(self.imgProduct.image ?? UIImage(named: self.DEFAULT_IMG)!)
+                        self.setNeedsLayout()
+                        self.layoutIfNeeded()
                     }
                 }else{
                     self.imgProduct.image = UIImage(named: self.DEFAULT_IMG)
