@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in ProductListFacade.getListProducts(_:_:_:):ProductListFacade.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result.products[2].price">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ProductsViewController.initData():ProductsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.lstProducts.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

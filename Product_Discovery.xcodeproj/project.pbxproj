@@ -21,6 +21,7 @@
 		8AA4532722F53A540084FB47 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA4532622F53A540084FB47 /* OptionalExtension.swift */; };
 		8AA4532922F53A6D0084FB47 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA4532822F53A6D0084FB47 /* UIViewExtension.swift */; };
 		8AA4532B22F53E220084FB47 /* ProductsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA4532A22F53E220084FB47 /* ProductsDTO.swift */; };
+		8AA4532D22F5434F0084FB47 /* ProductListFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA4532C22F5434F0084FB47 /* ProductListFacade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		8AA4532622F53A540084FB47 /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		8AA4532822F53A6D0084FB47 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		8AA4532A22F53E220084FB47 /* ProductsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDTO.swift; sourceTree = "<group>"; };
+		8AA4532C22F5434F0084FB47 /* ProductListFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListFacade.swift; sourceTree = "<group>"; };
 		FD25CBB780012B6E49C2BB48 /* Pods-Product_Discovery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product_Discovery.release.xcconfig"; path = "Pods/Target Support Files/Pods-Product_Discovery/Pods-Product_Discovery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				8AA4531422F537BE0084FB47 /* Cells */,
 				8AA4531622F537E50084FB47 /* ProductsViewController.swift */,
 				8AA4531722F537E50084FB47 /* ProductsViewController.xib */,
+				8AA4532C22F5434F0084FB47 /* ProductListFacade.swift */,
 			);
 			path = ProductListing;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				8AA4531F22F539D40084FB47 /* AppUtils.swift in Sources */,
 				8AA4532922F53A6D0084FB47 /* UIViewExtension.swift in Sources */,
 				8AA4532422F53A0F0084FB47 /* CustomGradientView.swift in Sources */,
+				8AA4532D22F5434F0084FB47 /* ProductListFacade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,7 +66,7 @@ class AppUtils: NSObject {
                 // let's just print it to prove we can access its
                 
                 let resultData = AppUtils.jsonToString(json: todo["result"] as AnyObject)
-                let strData = "\(resultData)".replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: " ", with: "")
+                let strData = "\(resultData)"
                 
                 // SHow logs to terminals
                 print("\(AppUtils.getTimestamp())  - Respone from service for Request :\n\(url)\n\(strData)\n\n")
