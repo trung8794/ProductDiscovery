@@ -59,7 +59,7 @@ class ProductsViewController: UIViewController {
     }
 
     // MARK: - Services
-    func getListProducts(_keywords: String = "", _page: String = "1", _limit: String = "30"){
+    func getListProducts(_keywords: String = "", _page: String = "1", _limit: String = "20"){
         isLoadingData = true
         productListFacade.getListProducts(keyWords: _keywords, page: _page, limit: _limit, completion: { (products) in
             if products.count > 0{
@@ -103,7 +103,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
             let lastElement = lstProducts.count - 1
             if indexPath.row == lastElement && !isLoadingData && !isEndData{
                 let pageStt = "\(self.currentPage)"
-                self.getListProducts(_keywords: keyWord, _page: pageStt, _limit: "10")
+                self.getListProducts(_keywords: keyWord, _page: pageStt, _limit: "8")
                 
             }
         }
