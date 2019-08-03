@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController" customModule="Product_Discovery" customModuleProvider="target">
+            <connections>
+                <outlet property="searchNavigationView" destination="dPT-Va-WHB" id="nJc-l9-4ez"/>
+                <outlet property="searchTableView" destination="GbQ-UJ-VR0" id="OTT-Xa-rh5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPD-GI-b81" customClass="CustomGradientView" customModule="Product_Discovery" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="omR-Ir-xBg"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBK-nC-7lC" customClass="CustomGradientView" customModule="Product_Discovery" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                    <subviews>
+                        <view alpha="0.94999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPT-Va-WHB">
+                            <rect key="frame" x="15" y="6.5" width="384" height="35"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="Ii3-5p-AOc">
+                                    <rect key="frame" x="5" y="5.5" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Ii3-5p-AOc" secondAttribute="height" multiplier="1:1" id="BSk-G3-t15"/>
+                                        <constraint firstAttribute="height" constant="24" id="aer-fs-oJH"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên, mã sản phẩm" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="e8J-O8-xhu">
+                                    <rect key="frame" x="34" y="2.5" width="340" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="BGM-wt-RQ6"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Ii3-5p-AOc" firstAttribute="leading" secondItem="dPT-Va-WHB" secondAttribute="leading" constant="5" id="2ak-qR-iI0"/>
+                                <constraint firstItem="e8J-O8-xhu" firstAttribute="leading" secondItem="Ii3-5p-AOc" secondAttribute="trailing" constant="5" id="I9n-Bh-0Qr"/>
+                                <constraint firstItem="Ii3-5p-AOc" firstAttribute="centerY" secondItem="dPT-Va-WHB" secondAttribute="centerY" id="bqn-Yc-4Pl"/>
+                                <constraint firstItem="e8J-O8-xhu" firstAttribute="centerY" secondItem="dPT-Va-WHB" secondAttribute="centerY" id="fxd-GB-Fox"/>
+                                <constraint firstAttribute="trailing" secondItem="e8J-O8-xhu" secondAttribute="trailing" constant="10" id="o8d-Gy-rb9"/>
+                                <constraint firstAttribute="height" constant="35" id="tfw-nv-gsq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="dPT-Va-WHB" firstAttribute="centerY" secondItem="XBK-nC-7lC" secondAttribute="centerY" id="hLB-89-1qQ"/>
+                        <constraint firstAttribute="trailing" secondItem="dPT-Va-WHB" secondAttribute="trailing" constant="15" id="jtF-Pg-xXE"/>
+                        <constraint firstItem="dPT-Va-WHB" firstAttribute="leading" secondItem="XBK-nC-7lC" secondAttribute="leading" constant="15" id="tdG-EF-CJr"/>
+                        <constraint firstAttribute="height" constant="48" id="tt3-xM-gcR"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GbQ-UJ-VR0">
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mPD-GI-b81" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="06h-fk-dIs"/>
+                <constraint firstItem="XBK-nC-7lC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9Wc-Th-hZw"/>
+                <constraint firstItem="GbQ-UJ-VR0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="G8N-no-n5I"/>
+                <constraint firstItem="GbQ-UJ-VR0" firstAttribute="top" secondItem="XBK-nC-7lC" secondAttribute="bottom" id="PT1-Xb-qPq"/>
+                <constraint firstItem="mPD-GI-b81" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SeT-NB-Uab"/>
+                <constraint firstItem="XBK-nC-7lC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kxM-fS-vXh"/>
+                <constraint firstAttribute="trailing" secondItem="XBK-nC-7lC" secondAttribute="trailing" id="rAc-yE-U78"/>
+                <constraint firstAttribute="trailing" secondItem="mPD-GI-b81" secondAttribute="trailing" id="tvx-IN-YdW"/>
+                <constraint firstAttribute="trailing" secondItem="GbQ-UJ-VR0" secondAttribute="trailing" id="wlC-Jf-1ay"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GbQ-UJ-VR0" secondAttribute="bottom" id="y46-7y-cXp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="24" height="24"/>
+    </resources>
+</document>

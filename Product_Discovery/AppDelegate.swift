@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Load ProductViewcontroller for first Lauch of application
+        let viewController = ProductsViewController(nibName: Constants.STARTING_VIEWCONTROLLER, bundle: nil)
+        
+        // Set root View controller of this app to be ProductViewcontroller
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 
