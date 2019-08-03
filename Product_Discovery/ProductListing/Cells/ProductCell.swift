@@ -35,7 +35,7 @@ class ProductCell: UITableViewCell {
     
     // MARK: - Functions
     func configCell(_ data: ProductDTO){
-        self.selectionStyle = UITableViewCell.SelectionStyle.none
+//        self.selectionStyle = UITableViewCell.SelectionStyle.none
         // Clear data for reloading new Cell cause of Register
         clearOldData()
         

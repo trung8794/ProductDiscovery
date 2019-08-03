@@ -21,7 +21,6 @@ class ProductDetailViewController: UIViewController {
     // MARK: - Life Circles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initData()
     }
     
