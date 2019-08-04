@@ -135,7 +135,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = ProductDetailViewController(nibName: "ProductDetailViewController", bundle: nil)
         detailVC.skuValue = lstProducts[indexPath.row].sku
-        self.present(detailVC, animated: false, completion: nil)
+        self.present(detailVC, animated: true, completion: nil)
     }
     
 }

@@ -15,4 +15,7 @@ import Foundation
 class Constants {
     // MARK: - List of Viewcontroller Name Constants
     static let STARTING_VIEWCONTROLLER = "ProductsViewController"
+    
+    // MARK: LETS
+    static let DEFAULT_IMG = "small"
 }

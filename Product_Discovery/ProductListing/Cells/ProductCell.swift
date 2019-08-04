@@ -21,8 +21,6 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var lblOldPrice: UILabel!
     @IBOutlet weak var lblDiscount: UILabel!
     
-    // MARK: Lets
-    let DEFAULT_IMG = "small"
     
     var cacheImageForCell: ((_ image: UIImage) -> ())?
     
@@ -92,7 +90,8 @@ class ProductCell: UITableViewCell {
     
     
     func clearOldData(){
-        imgProduct.image = UIImage(named: DEFAULT_IMG)
+        imgProduct.image = nil
+        imgProduct.image = UIImage(named: Constants.DEFAULT_IMG)
         lblProductName.text = nil
         lblSellPrice.text = nil
         lblOldPrice.text = nil
@@ -103,7 +102,7 @@ class ProductCell: UITableViewCell {
     
     func loadImageAsync(_ urlStr: String){
         guard let url = URL(string: urlStr ) else{
-            self.imgProduct.image = UIImage(named: DEFAULT_IMG)
+            self.imgProduct.image = UIImage(named: Constants.DEFAULT_IMG)
             return
         }
         
@@ -112,14 +111,13 @@ class ProductCell: UITableViewCell {
             DispatchQueue.main.async {
                 if data != nil{
                     self.imgProduct.image =  UIImage(data: data!)
+                    self.setNeedsLayout()
+                    self.layoutIfNeeded()
                     if let cachImage = self.cacheImageForCell{
-                        
-                        cachImage(self.imgProduct.image ?? UIImage(named: self.DEFAULT_IMG)!)
-                        self.setNeedsLayout()
-                        self.layoutIfNeeded()
+                        cachImage(self.imgProduct.image ?? UIImage(named: Constants.DEFAULT_IMG)!)
                     }
                 }else{
-                    self.imgProduct.image = UIImage(named: self.DEFAULT_IMG)
+                    self.imgProduct.image = UIImage(named: Constants.DEFAULT_IMG)
                 }
             }
         }
