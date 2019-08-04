@@ -135,6 +135,13 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = ProductDetailViewController(nibName: "ProductDetailViewController", bundle: nil)
         detailVC.skuValue = lstProducts[indexPath.row].sku
+        if lstProducts.count > 8{
+            for index in 0...7{
+                detailVC.lstRelatedProducts.append(lstProducts[index])
+            }
+        }else{
+            detailVC.lstRelatedProducts = lstProducts
+        }
         self.present(detailVC, animated: true, completion: nil)
     }
     

@@ -18,4 +18,7 @@ class Constants {
     
     // MARK: LETS
     static let DEFAULT_IMG = "small"
+    
+    // Height
+    static let HEIGHT_CELL_MORE_INFO = 40.0
 }

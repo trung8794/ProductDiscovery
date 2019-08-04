@@ -11,6 +11,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ProductDetailViewController.setupPageController():ProductDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewControllers">
+            </PersistentString>
+            <PersistentString
+               value = "viewControllerAtIndex(0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in ProductListFacade.getListProducts(_:_:_:):ProductListFacade.swift">
          <PersistentStrings>
             <PersistentString
@@ -29,6 +40,14 @@
             </PersistentString>
             <PersistentString
                value = "self.stackCarouselView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProductDetailViewController.viewControllerAtIndex(_:):ProductDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewControllers[index]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

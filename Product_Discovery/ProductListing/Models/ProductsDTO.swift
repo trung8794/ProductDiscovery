@@ -23,7 +23,10 @@ class ProductDTO: EVObject {
     var name: String?
     var images = [ImageProductDTO]()
     var price = PriceDTO()
+    var totalAvailable: String?
+    
     var cachedImages =  [UIImage]()
+    
 }
 
 class ImageProductDTO: EVObject {
